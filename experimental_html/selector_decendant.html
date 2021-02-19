@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Judul Dokumen</title>
+        
+        <style>
+            /* Rule akan diterapkan pada elemen paragraf yang merupakan turunan dari elemen div */
+            /* rule akan diterapkan pada sebuah tautan yang belum pernah dikunjungi */
+            a:link {
+            color: red;
+               }
+ 
+               /* rule akan diterapkan pada sebuah tautan yang sudah pernah dikunjungi */
+            a:visited {
+               color: green;
+               }
+ 
+               /* rule akan diterapkan pada sebuah tautan ketika diarahkan dengan kursor */
+               a:hover {
+               color: pink;
+                  }
+ 
+               /* rule akan diterapkan pada sebuah tautan ketika ditekan */
+               a:active {
+               color:orange;
+                  }          
+
+                  blockquote::before{
+                     content: '"';
+                     font-size: 24px;
+                     font-style: italic;
+                     font-weight: bold;
+                  }
+
+                  blockquote::after{
+                     content: '~';
+                     font-size: 24px;
+                     font-style: italic;
+                     font-weight: bold;
+                  }
+                  
+                  p::first-letter {
+                  font-size: 32px;
+                  font-weight: bold;
+                  color: saddlebrown;
+               }
+        </style>
+     </head>
+     <body>
+        <div>
+            <p>Paragraf pertama. di dalam div.</p>
+            <p>Paragraf kedua. di dalam div.</p>
+            <section><p>Paragraf ketiga. di dalam div walaupun bukan sebagai anak elemen secara langsung, namun termasuk dalam turunannya.</p></section>
+            <p>Paragraf keempat. di dalam div.</p>
+         </div>
+
+         <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia praesentium quas recusandae rem.</blockquote>
+    
+         <p><a href="https://www.google.com/">Google</a></p>
+    </body>
+</html>
+

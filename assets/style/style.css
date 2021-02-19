@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Quicksand',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    padding: 20px;
+    overflow: auto;
+}
+
+h2, h3{
+    color: rgb(182, 37, 226);
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #00a2c6;
+    text-align: center;
+    font-weight: bold;
+ }
+
+.keren{
+    font-weight: bold;
+    text-shadow: 4px 4px 3px rgb(255, 0, 0);
+}
+
+p.keren{
+    text-shadow: 4px 4px 3px #00c8eb;;
+}
+
+#xp_0{
+    color: red;
+}
+
+  
+
+ .profile header{
+     text-align: center;
+     
+ }
+ 
+ .profile img{
+     width: 200px;
+ }
+ 
+ .featured-image{
+     width: 100%;
+     max-height: 300px;
+     object-fit: cover;
+     object-position: center;
+
+
+ }
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+ }
+
+ header{
+     display: inline;
+ }
+
+ .jembuttron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #00c8eb;
+    text-align: center;
+    color: white;
+ }
+
+ nav{
+     background-color: rgb(0, 183, 255);
+     padding: 7px;
+
+     position: sticky;
+     top: 0;
+ }
+
+ nav a{
+     font-size: 20px;
+     font-weight: 400;
+     color: white;
+     text-decoration-line: none;
+ }
+
+
+ nav li{
+     display: inline;
+     list-style-type: none;
+     margin-right: 20px;
+ }
+
+ nav a:hover{
+    font-weight: bold;
+    color: rgb(28, 73, 94);
+}
+
+ .this-img{
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+    width: 500px;
+ }
+
+ .imgcenter img{
+     width: 500px;
+ }
+
+ #alphazero{
+     position: relative;
+     top: 30px;
+     left: 10px;
+ }
+
+ 
+
+ #content {
+    float: left;
+    width: 75%;
+ }
+
+ aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+ }
+
+
+ @media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+ }
