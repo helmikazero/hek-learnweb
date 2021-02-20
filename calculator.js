@@ -28,6 +28,7 @@ for(let button of buttons){
         const target = event.target;
 
         inputDigit(target.innerText);
-        updateDisplay
+        
+        updateDisplay()
     });
 }
