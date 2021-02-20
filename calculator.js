@@ -1,11 +1,16 @@
-let thisCar = {
-    firstName: "Toyota",
-    secondName: "Corolla",
-    year: 1998,
-    isAWD: false,
-    features: ["Open Cabin","Double Stereo", "Jembut"]
-};
+function greeting(name, language) {
+    if(language === "English") {
+        return "Good Morning " + name + "!";
+    } else if (language === "French") {
+        return "Bonjour " + name + "!";
+    } else {
+        return "Selamat Pagi " + name + "!";
+    }
+}
 
-console.log("You've bought "+thisCar.firstName+ " "+thisCar.secondName);
-console.log("Year of manufacture is "+ thisCar.year);
-console.log("ANd some of its feature are : "+thisCar.features);
+let greetingMessage = greeting("Harry", "French");
+console.log(greetingMessage);
+
+/* output
+Bonjour Harry!
+*/
