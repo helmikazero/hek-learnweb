@@ -1,8 +1,11 @@
-let myArray = ["Coklat", 42.5, 22, true, "Programming"];
-console.log(myArray[0]);
-console.log(myArray[1]);
-console.log(myArray[2]);
-console.log(myArray[3]);
-console.log(myArray[4]);
-console.log(myArray[5]);
-console.log("Panjang nilai myArray adalah " + myArray.length + ".");
+let thisCar = {
+    firstName: "Toyota",
+    secondName: "Corolla",
+    year: 1998,
+    isAWD: false,
+    features: ["Open Cabin","Double Stereo", "Jembut"]
+};
+
+console.log("You've bought "+thisCar.firstName+ " "+thisCar.secondName);
+console.log("Year of manufacture is "+ thisCar.year);
+console.log("ANd some of its feature are : "+thisCar.features);
