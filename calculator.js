@@ -1,4 +1,4 @@
-console.log("Managed to read the script...");
+console.log("This is a branch and i'm changing it now...");
 
 const calculator = {
     displayNumber : '0',
@@ -28,7 +28,7 @@ for(let button of buttons){
         const target = event.target;
 
         inputDigit(target.innerText);
-        
+
         updateDisplay()
     });
 }
