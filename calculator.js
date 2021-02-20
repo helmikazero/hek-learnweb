@@ -15,6 +15,45 @@ const calculator = {
     calculator.firstNumber = null;
     calculator.waitingForSecondNumber = false;
  }
+
+//PERHITUNGAN
+function operatorHandler(operator){
+    if(!calculator.waitingForSecondNumber){
+        calculator.operator = operator;
+        calculator.waitingForSecondNumber = true;
+        calculator.firstNumber = calculator.displayNumber;
+
+        calculator.displayNumber = '0';
+    }else{
+        alert('Operator is already set before, current operator is "'+calculator.operator+'"');
+    }
+}
+
+function inverseNumber(){
+    if(calculator.displayNumber === '0'){
+        return;
+    }
+
+    calculator.displayNumber = calculator.displayNumber * -1;
+}
+
+function performCalculation() {
+    if(calculator.firstNumber == null || calculator.operator == null){
+        alert("No number is in");
+        return;
+    }
+
+    let result = 0;
+    if(calculator.operator === "+"){
+        result = parseInt(calculator.firstNumber) + parseInt(calculator.displayNumber);
+    }else{
+        result = parseInt(calculator.firstNumber) - parseInt(calculator.displayNumber);
+    }
+
+    calculator.displayNumber = result;
+}
+
+
   
  function inputDigit(digit) {
     if(calculator.displayNumber === '0')
@@ -31,16 +70,41 @@ const calculator = {
   
   
  const buttons = document.querySelectorAll(".button");
+
  for (let button of buttons) {
     button.addEventListener('click', function(event) {
   
         // mendapatkan objek elemen yang diklik
         const target = event.target;
-  
-        console.log(target.innerText);
-        inputDigit(target.innerText);
 
-        console.log(calculator.displayNumber);
+        if(target.classList.contains('clear')){
+            clearCalculator();
+            updateDisplay();
+
+            return;
+        }
+
+        if(target.classList.contains('operator')){
+            operatorHandler(target.innerText);
+
+            return;
+        }
+
+        if(target.classList.contains('negative')){
+            inverseNumber();
+            updateDisplay();
+
+            return;
+        }
+
+        if(target.classList.contains('equals')){
+            performCalculation();
+            updateDisplay();
+
+            return;
+        }
+
+        inputDigit(target.innerText);
         updateDisplay()
     });
  }
